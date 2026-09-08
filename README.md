@@ -8,6 +8,22 @@ BdoPin is designed to make it easy to control which CPU threads `BlackDesert64.e
 
 ---
 
+## Screenshots
+
+### Main Window
+
+BdoPin detects the CPU topology, shows the selected logical CPUs, process priority, and the result of the most recent application.
+
+![BdoPin Main Window](images/bdopin-main.jpg)
+
+### Processor Affinity
+
+The applied CPU affinity can also be verified through the Windows processor affinity dialog.
+
+![BdoPin Processor Affinity](images/bdopin-affinity.jpg)
+
+---
+
 ## Features
 
 - AMD Ryzen SMT-aware CPU affinity presets
@@ -54,13 +70,11 @@ Compare your system before and after applying a preset.
 
 ## Administrator privileges
 
-BdoPin itself can start normally without administrator privileges.
+BdoPin itself starts normally without administrator privileges.
 
-When you press **Apply Now**, Windows may require administrator privileges to modify `BlackDesert64.exe`.
+When you press **Apply Now**, Windows may request administrator privileges if they are required to modify `BlackDesert64.exe`.
 
-If required, BdoPin will request elevation through the standard Windows UAC prompt.
-
-Automatic background detection will not display a UAC prompt without direct user interaction.
+Automatic background detection does not trigger a UAC prompt by itself.
 
 ---
 
@@ -96,7 +110,7 @@ To remove the affinity restriction, use **Use All CPUs**.
 
 ## Download
 
-Download the latest build from the **Releases** section of this repository.
+Download the latest version from the **Releases** section of this repository.
 
 ---
 
@@ -105,11 +119,6 @@ Download the latest build from the **Releases** section of this repository.
 Developed by **Eltax**.
 
 I'm a Komori too, so I simply called it the **Komori Edition**.
-
-BdoPin is an independent fan-made utility.
-
-It is not affiliated with or endorsed by  
-**Pearl Abyss, NAVER CHZZK, or Hikimori Neko.**
 
 ---
 
@@ -120,6 +129,22 @@ It is not affiliated with or endorsed by
 BdoPin은 검은사막의 CPU Affinity(프로세서 선호도)와 프로세스 우선순위를 간편하게 설정하기 위한 가벼운 Windows 유틸리티입니다.
 
 시스템 전체의 CPU 설정을 변경하는 것이 아니라, `BlackDesert64.exe`가 사용할 CPU 논리 프로세서를 선택해서 제한하는 방식입니다.
+
+---
+
+## 스크린샷
+
+### 메인 화면
+
+CPU 토폴로지, 선택된 논리 CPU, 프로세스 우선순위, 최근 적용 결과를 확인할 수 있습니다.
+
+![BdoPin 메인 화면](images/bdopin-main.jpg)
+
+### 프로세서 선호도
+
+`BlackDesert64.exe`에 적용된 CPU Affinity는 Windows 프로세서 선호도 화면에서도 확인할 수 있습니다.
+
+![BdoPin 프로세서 선호도](images/bdopin-affinity.jpg)
 
 ---
 
@@ -157,7 +182,7 @@ CPU 구조, 게임의 작업 부하, Windows 스케줄러 동작에 따라 일�
 
 - CPU 스케줄링 간섭 감소
 - 프레임 타임 안정화
-- 일부 환경에서의 순간적인 끊김 감소
+- 일부 환경에서 순간적인 끊김 감소
 
 단, 시스템마다 결과는 다릅니다.
 
@@ -170,11 +195,9 @@ BdoPin은 **FPS 상승이나 성능 향상을 보장하지 않습니다.**
 
 BdoPin 자체는 일반 사용자 권한으로 실행할 수 있습니다.
 
-사용자가 **지금 적용** 버튼을 눌렀을 때 Windows가 `BlackDesert64.exe` 변경 권한을 허용하지 않는 환경에서는 관리자 권한이 필요할 수 있습니다.
+사용자가 **지금 적용** 버튼을 눌렀을 때 `BlackDesert64.exe` 변경에 관리자 권한이 필요한 환경에서는 Windows UAC가 표시될 수 있습니다.
 
-필요한 경우 Windows의 기본 UAC 창을 통해 관리자 권한을 요청합니다.
-
-백그라운드 자동 감지 기능 때문에 사용자 입력 없이 갑자기 UAC 창이 나타나도록 하지 않습니다.
+백그라운드 자동 감지 기능만으로 UAC 창이 자동으로 나타나지는 않습니다.
 
 ---
 
@@ -219,7 +242,3 @@ Affinity 제한을 해제하고 싶다면 **전체 CPU 사용** 기능을 사용
 개발: **Eltax**
 
 저도 코모리라서 그냥 **Komori Edition**이라고 이름 붙였습니다.
-
-BdoPin은 개인이 제작한 독립적인 팬메이드 유틸리티입니다.
-
-**Pearl Abyss, NAVER CHZZK, Hikimori Neko와 공식적인 제휴 또는 보증 관계가 없습니다.**
