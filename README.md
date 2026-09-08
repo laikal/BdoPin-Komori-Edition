@@ -14,13 +14,13 @@ BdoPin is designed to make it easy to control which CPU threads `BlackDesert64.e
 
 BdoPin detects the CPU topology, shows the selected logical CPUs, process priority, and the result of the most recent application.
 
-![BdoPin Main Window](images/bdopin-main.jpg)
+![BdoPin Main Window](images/bdopin-main.png.jpg)
 
 ### Processor Affinity
 
 The applied CPU affinity can also be verified through the Windows processor affinity dialog.
 
-![BdoPin Processor Affinity](images/bdopin-affinity.jpg)
+![BdoPin Processor Affinity](images/bdopin-affinity.png.jpg)
 
 ---
 
@@ -138,13 +138,13 @@ BdoPin은 검은사막의 CPU Affinity(프로세서 선호도)와 프로세스 �
 
 CPU 토폴로지, 선택된 논리 CPU, 프로세스 우선순위, 최근 적용 결과를 확인할 수 있습니다.
 
-![BdoPin 메인 화면](images/bdopin-main.jpg)
+![BdoPin 메인 화면](images/bdopin-main.png.jpg)
 
 ### 프로세서 선호도
 
 `BlackDesert64.exe`에 적용된 CPU Affinity는 Windows 프로세서 선호도 화면에서도 확인할 수 있습니다.
 
-![BdoPin 프로세서 선호도](images/bdopin-affinity.jpg)
+![BdoPin 프로세서 선호도](images/bdopin-affinity.png.jpg)
 
 ---
 
