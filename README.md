@@ -2,11 +2,11 @@
 
 **English | [한국어](#한국어)**
 
-A lightweight native 64-bit Windows utility for managing CPU affinity and process priority for Black Desert.
+A lightweight 64-bit Windows utility for managing CPU affinity and process priority for Black Desert.
 
 BdoPin lets you control which logical processors `BlackDesert64.exe` can use without changing the CPU configuration of the entire system.
 
-It is designed as a small standalone x64 application and does not require an external runtime or additional framework.
+BdoPin is built with **C# and .NET Framework 4.8** for 64-bit Windows.
 
 ---
 
@@ -28,7 +28,7 @@ The applied CPU affinity can also be verified through the Windows processor affi
 
 ## Features
 
-- Native 64-bit Windows application
+- 64-bit Windows application built with .NET Framework 4.8
 - AMD Ryzen SMT-aware CPU affinity presets
 - Intel P-core / E-core aware presets
 - Automatic CPU vendor and topology detection
@@ -38,8 +38,8 @@ The applied CPU affinity can also be verified through the Windows processor affi
 - Optional automatic application when Black Desert starts
 - Korean and English UI
 - Lightweight event-based diagnostic logging
-- No external runtime required
-- No external UI framework or background service required
+- Uses Windows Forms without an additional third-party UI framework
+- No background service required
 
 ---
 
@@ -156,9 +156,10 @@ BdoPin only uses standard Windows process-management functions to configure CPU 
 
 - 64-bit Windows 10 or Windows 11
 - x64 processor
+- **.NET Framework 4.8**
 - Black Desert Windows client using `BlackDesert64.exe`
 
-BdoPin itself is a native 64-bit application.
+BdoPin is a 64-bit Windows application built with **C# and .NET Framework 4.8**.
 
 ---
 
@@ -170,7 +171,25 @@ Extract the downloaded ZIP file and run:
 
 `BdoPin.exe`
 
-No installer or additional runtime is required.
+BdoPin does not require an installer.
+
+**.NET Framework 4.8 is required.**
+
+---
+
+## Source Code
+
+The source code is available in the [`src`](src) directory.
+
+The project is written in **C#** and targets **.NET Framework 4.8**.
+
+---
+
+## License
+
+BdoPin - Komori Edition is released under the **Apache License 2.0**.
+
+See the [`LICENSE`](LICENSE) file for details.
 
 ---
 
@@ -186,11 +205,11 @@ I'm a Komori too, so I simply called it the **Komori Edition**.
 
 **[English](#bdopin---komori-edition) | 한국어**
 
-BdoPin은 검은사막의 CPU Affinity(프로세서 선호도)와 프로세스 우선순위를 간편하게 설정하기 위한 가벼운 **네이티브 64비트 Windows 유틸리티**입니다.
+BdoPin은 검은사막의 CPU Affinity(프로세서 선호도)와 프로세스 우선순위를 간편하게 설정하기 위한 가벼운 **64비트 Windows 유틸리티**입니다.
 
 시스템 전체의 CPU 설정을 변경하는 것이 아니라, `BlackDesert64.exe`가 사용할 논리 프로세서를 선택하여 제한하는 방식으로 동작합니다.
 
-별도의 외부 런타임이나 추가 UI 프레임워크가 필요하지 않은 작은 x64 독립 실행형 프로그램입니다.
+BdoPin은 **C#과 .NET Framework 4.8**을 기반으로 제작된 64비트 Windows 프로그램입니다.
 
 ---
 
@@ -212,7 +231,7 @@ CPU 토폴로지, 선택된 논리 CPU, 현재 프리셋, 프로세스 우선순
 
 ## 주요 기능
 
-- 네이티브 64비트 Windows 프로그램
+- .NET Framework 4.8 기반 64비트 Windows 프로그램
 - AMD Ryzen SMT 구조를 고려한 CPU Affinity 프리셋
 - Intel P-Core / E-Core 구조를 고려한 프리셋
 - CPU 제조사 및 토폴로지 자동 감지
@@ -222,8 +241,9 @@ CPU 토폴로지, 선택된 논리 CPU, 현재 프리셋, 프로세스 우선순
 - 검은사막 실행 시 선택 설정 자동 적용 기능
 - 한국어 / 영어 UI
 - 가벼운 이벤트 기반 진단 로그
-- 별도의 외부 런타임 불필요
-- 별도의 UI 프레임워크나 백그라운드 서비스 불필요
+- Windows Forms 기반 UI
+- 별도의 서드파티 UI 프레임워크 불필요
+- 별도의 백그라운드 서비스 불필요
 
 ---
 
@@ -342,9 +362,10 @@ BdoPin은 Windows의 표준 프로세스 관리 기능을 이용하여 CPU Affin
 
 - 64비트 Windows 10 또는 Windows 11
 - x64 프로세서
+- **.NET Framework 4.8**
 - `BlackDesert64.exe`를 사용하는 Windows용 검은사막 클라이언트
 
-BdoPin 자체도 네이티브 64비트 프로그램입니다.
+BdoPin은 **C#과 .NET Framework 4.8**을 기반으로 제작된 64비트 Windows 프로그램입니다.
 
 ---
 
@@ -358,7 +379,25 @@ BdoPin 자체도 네이티브 64비트 프로그램입니다.
 
 를 실행하면 됩니다.
 
-별도의 설치 프로그램이나 추가 런타임은 필요하지 않습니다.
+별도의 설치 프로그램은 필요하지 않습니다.
+
+**.NET Framework 4.8이 필요합니다.**
+
+---
+
+## 소스 코드
+
+소스 코드는 [`src`](src) 디렉터리에 공개되어 있습니다.
+
+프로젝트는 **C#**으로 작성되었으며 **.NET Framework 4.8**을 대상으로 합니다.
+
+---
+
+## 라이선스
+
+BdoPin - Komori Edition은 **Apache License 2.0**으로 배포됩니다.
+
+자세한 내용은 [`LICENSE`](LICENSE) 파일을 확인해 주세요.
 
 ---
 
