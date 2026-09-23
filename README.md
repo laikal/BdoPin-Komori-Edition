@@ -2,11 +2,11 @@
 
 **English | [한국어](#한국어)**
 
-A lightweight 64-bit Windows utility for managing CPU affinity and process priority for Black Desert.
+A lightweight native 64-bit Windows utility for managing CPU affinity and process priority for Black Desert.
 
 BdoPin lets you control which logical processors `BlackDesert64.exe` can use without changing the CPU configuration of the entire system.
 
-BdoPin is built with **C# and .NET Framework 4.8** for 64-bit Windows.
+BdoPin is written in **C using the Windows API** and is distributed as a small standalone x64 application.
 
 ---
 
@@ -28,7 +28,8 @@ The applied CPU affinity can also be verified through the Windows processor affi
 
 ## Features
 
-- 64-bit Windows application built with .NET Framework 4.8
+- Native 64-bit Windows application
+- Written in C using the Windows API
 - AMD Ryzen SMT-aware CPU affinity presets
 - Intel P-core / E-core aware presets
 - Automatic CPU vendor and topology detection
@@ -38,7 +39,8 @@ The applied CPU affinity can also be verified through the Windows processor affi
 - Optional automatic application when Black Desert starts
 - Korean and English UI
 - Lightweight event-based diagnostic logging
-- Uses Windows Forms without an additional third-party UI framework
+- No .NET runtime required
+- No external UI framework required
 - No background service required
 
 ---
@@ -124,7 +126,8 @@ The log may contain technical information useful for troubleshooting, including:
 - affinity application results
 - Windows error codes when an operation fails
 
-Logging occurs only when relevant events happen.  
+Logging occurs only when relevant events happen.
+
 BdoPin does not continuously poll or write diagnostic data in the background for logging purposes.
 
 The log is limited to approximately **1 MB**.
@@ -156,10 +159,11 @@ BdoPin only uses standard Windows process-management functions to configure CPU 
 
 - 64-bit Windows 10 or Windows 11
 - x64 processor
-- **.NET Framework 4.8**
 - Black Desert Windows client using `BlackDesert64.exe`
 
-BdoPin is a 64-bit Windows application built with **C# and .NET Framework 4.8**.
+BdoPin itself is a native 64-bit Windows application.
+
+No .NET runtime or additional application framework is required.
 
 ---
 
@@ -167,13 +171,15 @@ BdoPin is a 64-bit Windows application built with **C# and .NET Framework 4.8**.
 
 Download the latest version from the **Releases** section of this repository.
 
+Current release:
+
+`BdoPin-1.03C-win64.zip`
+
 Extract the downloaded ZIP file and run:
 
 `BdoPin.exe`
 
-BdoPin does not require an installer.
-
-**.NET Framework 4.8 is required.**
+No installer is required.
 
 ---
 
@@ -181,7 +187,9 @@ BdoPin does not require an installer.
 
 The source code is available in the [`src`](src) directory.
 
-The project is written in **C#** and targets **.NET Framework 4.8**.
+BdoPin is written in **C** and uses standard Windows APIs.
+
+The source code published in this repository corresponds to the current native Windows version of BdoPin.
 
 ---
 
@@ -190,6 +198,21 @@ The project is written in **C#** and targets **.NET Framework 4.8**.
 BdoPin - Komori Edition is released under the **Apache License 2.0**.
 
 See the [`LICENSE`](LICENSE) file for details.
+
+---
+
+## Code signing policy
+
+Free code signing provided by [SignPath.io](https://signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
+
+### Team roles
+
+- Author, committer and reviewer: [laikal](https://github.com/laikal)
+- Approver: [laikal](https://github.com/laikal)
+
+### Privacy
+
+This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it.
 
 ---
 
@@ -205,11 +228,11 @@ I'm a Komori too, so I simply called it the **Komori Edition**.
 
 **[English](#bdopin---komori-edition) | 한국어**
 
-BdoPin은 검은사막의 CPU Affinity(프로세서 선호도)와 프로세스 우선순위를 간편하게 설정하기 위한 가벼운 **64비트 Windows 유틸리티**입니다.
+BdoPin은 검은사막의 CPU Affinity(프로세서 선호도)와 프로세스 우선순위를 간편하게 설정하기 위한 가벼운 **네이티브 64비트 Windows 유틸리티**입니다.
 
 시스템 전체의 CPU 설정을 변경하는 것이 아니라, `BlackDesert64.exe`가 사용할 논리 프로세서를 선택하여 제한하는 방식으로 동작합니다.
 
-BdoPin은 **C#과 .NET Framework 4.8**을 기반으로 제작된 64비트 Windows 프로그램입니다.
+BdoPin은 **C 언어와 Windows API**를 기반으로 제작된 독립 실행형 x64 프로그램입니다.
 
 ---
 
@@ -231,7 +254,8 @@ CPU 토폴로지, 선택된 논리 CPU, 현재 프리셋, 프로세스 우선순
 
 ## 주요 기능
 
-- .NET Framework 4.8 기반 64비트 Windows 프로그램
+- 네이티브 64비트 Windows 프로그램
+- C 언어 및 Windows API 기반
 - AMD Ryzen SMT 구조를 고려한 CPU Affinity 프리셋
 - Intel P-Core / E-Core 구조를 고려한 프리셋
 - CPU 제조사 및 토폴로지 자동 감지
@@ -241,8 +265,8 @@ CPU 토폴로지, 선택된 논리 CPU, 현재 프리셋, 프로세스 우선순
 - 검은사막 실행 시 선택 설정 자동 적용 기능
 - 한국어 / 영어 UI
 - 가벼운 이벤트 기반 진단 로그
-- Windows Forms 기반 UI
-- 별도의 서드파티 UI 프레임워크 불필요
+- .NET 런타임 불필요
+- 별도의 외부 UI 프레임워크 불필요
 - 별도의 백그라운드 서비스 불필요
 
 ---
@@ -333,7 +357,7 @@ BdoPin은 문제 확인을 위한 가벼운 이벤트 기반 로그를 생성합
 
 로그 기록을 위해 지속적으로 시스템을 폴링하거나 디스크에 데이터를 기록하지 않습니다.
 
-로그 파일의 최대 크기는 약 **1MB**입니다.
+로그 파일의 최대 크기는 약 **1 MB**입니다.
 
 크기 제한에 도달하면 기존 로그를 삭제하고 새로운 `BdoPin.log` 파일을 자동으로 생성합니다.
 
@@ -362,10 +386,11 @@ BdoPin은 Windows의 표준 프로세스 관리 기능을 이용하여 CPU Affin
 
 - 64비트 Windows 10 또는 Windows 11
 - x64 프로세서
-- **.NET Framework 4.8**
 - `BlackDesert64.exe`를 사용하는 Windows용 검은사막 클라이언트
 
-BdoPin은 **C#과 .NET Framework 4.8**을 기반으로 제작된 64비트 Windows 프로그램입니다.
+BdoPin 자체도 네이티브 64비트 Windows 프로그램입니다.
+
+.NET 런타임이나 별도의 추가 애플리케이션 프레임워크는 필요하지 않습니다.
 
 ---
 
@@ -373,7 +398,11 @@ BdoPin은 **C#과 .NET Framework 4.8**을 기반으로 제작된 64비트 Window
 
 이 저장소의 **Releases** 메뉴에서 최신 버전을 받을 수 있습니다.
 
-다운로드한 ZIP 파일의 압축을 풀고:
+현재 배포 버전:
+
+`BdoPin-1.03C-win64.zip`
+
+압축을 풀고:
 
 `BdoPin.exe`
 
@@ -381,15 +410,15 @@ BdoPin은 **C#과 .NET Framework 4.8**을 기반으로 제작된 64비트 Window
 
 별도의 설치 프로그램은 필요하지 않습니다.
 
-**.NET Framework 4.8이 필요합니다.**
-
 ---
 
 ## 소스 코드
 
 소스 코드는 [`src`](src) 디렉터리에 공개되어 있습니다.
 
-프로젝트는 **C#**으로 작성되었으며 **.NET Framework 4.8**을 대상으로 합니다.
+BdoPin은 **C 언어**로 작성되었으며 Windows의 표준 API를 사용합니다.
+
+이 저장소에 공개된 소스 코드는 현재 배포되는 네이티브 Windows 버전의 BdoPin에 대응합니다.
 
 ---
 
@@ -398,6 +427,23 @@ BdoPin은 **C#과 .NET Framework 4.8**을 기반으로 제작된 64비트 Window
 BdoPin - Komori Edition은 **Apache License 2.0**으로 배포됩니다.
 
 자세한 내용은 [`LICENSE`](LICENSE) 파일을 확인해 주세요.
+
+---
+
+## 코드 서명 정책
+
+BdoPin은 오픈소스 코드 서명을 위해 SignPath를 사용합니다.
+
+Free code signing provided by [SignPath.io](https://signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
+
+### 역할
+
+- 작성자 / 커미터 / 리뷰어: [laikal](https://github.com/laikal)
+- 서명 승인자: [laikal](https://github.com/laikal)
+
+### 개인정보 및 네트워크
+
+이 프로그램은 사용자가 명시적으로 요청하거나 프로그램을 설치 또는 운영하는 사용자가 요청한 경우를 제외하고 다른 네트워크 시스템으로 정보를 전송하지 않습니다.
 
 ---
 
