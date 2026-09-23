@@ -1,0 +1,153 @@
+; UTF-8. Missing keys fall back to built-in English. Optional \n line breaks.
+[Meta]
+LanguageName=English
+LanguageCode=en
+
+[Main]
+WindowTitle=BdoPin - Komori Edition
+Status=Status
+Waiting=Waiting for BlackDesert64.exe
+CPU=CPU
+Vendor=CPU Vendor
+Preset=Preset
+AutoDetect=Auto detect CPU vendor
+AutoApply=Apply when Black Desert starts
+MinimizeToTray=Minimize to tray
+StartWithWindows=Start with Windows
+CpuTopology=CPU Topology
+PhysicalCores=Physical Cores
+LogicalCPUs=Logical CPUs
+SelectedCPUs=Selected Logical CPUs
+ApplyNow=Apply Now
+ReloadPresets=Reload Presets
+Privilege=Run Privilege
+Administrator=Administrator
+StandardUser=Standard User
+RestartAdmin=Restart as administrator
+ProcessorGroups=Processor Groups
+PCores=P-Cores
+ECores=E/lower
+Unknown=Unknown
+Footer=Komori Edition ♡
+UseAllCPUs=Remove Settings
+ProcessPriority=Process Priority
+
+[Menu]
+File=File
+Preset=Preset
+Language=Language
+Help=Help
+HowTo=How to Use
+About=About BdoPin
+Exit=Exit
+OpenIni=Open BdoPin.ini
+Auto=Auto
+Korean=한국어
+English=English
+
+[Tray]
+Open=Open BdoPin
+ReloadPresets=Reload Presets
+About=About
+Exit=Exit
+
+[Close]
+Question=What would you like to do with BdoPin?
+Tray=Minimize to Tray
+Exit=Exit BdoPin
+Cancel=Cancel
+Failed=Could not open the close dialog. Use File > Exit.
+
+[Priority]
+Normal=Normal
+AboveNormal=Above Normal
+High=High
+Unchanged=Unchanged
+
+[LastApply]
+Title=Last Apply
+None=None
+Result=Result
+Success=Success
+Failed=Failed
+Error=Error
+
+[Status]
+Waiting=Waiting for BlackDesert64.exe
+WaitingTarget=Waiting for {target}
+Detected=Black Desert detected
+Applying=Applying CPU affinity...
+Applied=CPU affinity applied successfully
+AppliedPriority=CPU affinity and priority applied successfully
+ApplyFailed=CPU affinity apply failed
+AccessDenied=Access to the target process was denied.
+TopologyFailed=Failed to analyze CPU topology.
+Initializing=Initializing...
+DetectingCpu=Detecting CPU...
+Unavailable=Unavailable — affinity disabled
+InvalidSelection=Target detected, but preset/topology is invalid. Affinity was not applied.
+AutoOff=Target detected — automatic apply is off.
+Multiple=Target processes: {count}. Applied: {ok}; failed: {failed}.
+AdminDenied=Access denied even with administrator privileges.
+RetryDenied=Access denied after an elevation retry. Another restart is disabled.
+AdminRequired=Administrator privileges may be required. Use the restart button if desired.
+ElevationCancelled=Administrator request was cancelled.
+ElevationFailed=Administrator restart failed.
+AutoApplyAdminRequired=Automatic apply failed — administrator privileges are required. Click Apply Now to approve UAC.
+StartupEnabled=Start with Windows registration added. No elevation is requested.
+StartupDisabled=Start with Windows registration removed.
+RetryExited=Retry target has exited.
+LanguageRestart=Language change will be applied after restart.
+RetryScheduled=Temporary failure; retrying in one second.
+ResetApplied=Applied CPU affinity and priority settings removed
+PriorityFailed=Affinity applied, but priority setting failed.
+PrioritySaved=Priority saved. Use Apply Now for running processes.
+
+[Watcher]
+Starting=Watcher: starting
+Stopped=Watcher: stopped
+Active=Watcher: WMI process-start events active
+Failed=Watcher unavailable; use Apply Now. HRESULT
+Disconnected=Watcher stopped; reload presets to reconnect. HRESULT
+
+[Error]
+Title=BdoPin error
+OpenExternal=Could not open the associated application. ShellExecute error:
+Tray=Could not create tray icon. Window remains visible.
+About=Could not open About dialog.
+Startup=Startup registration failed
+StartupRollback=Startup rollback failed
+
+[Help]
+Title=How to Use BdoPin
+Close=Close
+OpenFailed=Could not open help.
+What=What does BdoPin do?\n\nBdoPin is a 64-bit Windows application built with .NET Framework 4.8.\n\nBdoPin sets the CPU cores and Windows process priority available to BlackDesert64.exe.\n\nIt does not disable SMT or Hyper-Threading across your system. The selected preset restricts only the logical CPUs available to the Black Desert process. Other programs' CPU settings are not changed.\n\nIf you change TargetProcess in the INI file, BdoPin applies these settings to that process instead.
+Why=Why use it?\n\nOn some CPU and game configurations, using selected physical cores or P-cores instead of every logical thread may reduce CPU scheduling interference and improve frame times or occasional stuttering.\n\nThe AMD Ryzen Physical Cores Only preset selects one logical thread per physical core, leaving out the other SMT sibling.\n\nThe Intel P-Cores / Physical Threads preset excludes E-cores and selects one logical thread per P-core, leaving out its other SMT sibling.\n\nBdoPin does not guarantee higher FPS. Results depend on your CPU, Windows version, game version and system configuration. Compare performance before and after applying a preset.
+QuickStart=Quick start\n\n1. Check that your CPU vendor was detected correctly.\n\n2. Select the preset you want to use.\n\n3. Review the Selected Logical CPUs list.\n\n4. Choose Process Priority. The default is Above Normal.\n\n5. Start Black Desert.\n\n6. If automatic application is enabled and process detection is available, BdoPin applies your settings when the game starts.\n\n7. If automatic detection is unavailable, start the game and click Apply Now.\n\n8. Click Remove Settings to enable all available logical CPUs and restore Normal priority. Your saved preset, priority selection and Auto Apply option are unchanged; the next game launch can apply them again.\n\nCheck Last Apply for the time, PID and success or failure result.
+Permissions=About permissions\n\nApply Now and Remove Settings first try with the current privileges. Only an access-denied result requests a Windows UAC restart, after which the selected action is performed automatically.\n\nCancelling keeps the existing window. Access may still be denied as administrator; BdoPin does not repeatedly request elevation.\n\nAuto Apply never requests UAC. WMI detection permissions are separate from game process access. Use Apply Now if automatic detection is unavailable.
+Safety=Safety\n\nBdoPin does not:\n\n- Read or write game memory\n- Inject DLLs\n- Install hooks\n- Patch code\n- Install kernel drivers\n- Modify game files\n- Bypass anti-cheat\n\nBdoPin uses documented Windows APIs to set process affinity and process priority only.
+
+[Monitor]
+DiskRead=Disk Read
+DiskWrite=Disk Write
+Drive=Game Drive
+DriveFallback=system drive fallback
+DiskScope=Read/write throughput for the entire selected drive, not only the game process.
+DiskScale=Full bar: peak observed in this window (minimum 1 MB/s).
+ShowAll=Show all logical CPUs
+CompactLogical=CPU (System)
+Empty=No CPUs
+Title=Performance Monitor
+ProcessCPU=Black Desert CPU Usage
+CPUScale=Process total, normalized across all system logical processors
+Logical=Logical Processor Usage (System)
+GPU=GPU Usage (3D, busiest engine)
+VRAM=Dedicated VRAM Usage
+Selected=Selected
+NotRunning=Black Desert is not running.
+Multiple=Multiple game processes: process metrics N/A
+Denied=Process access unavailable; process CPU N/A
+UnknownGPU=Unable to determine active GPU
+CountersUnavailable=Performance counters unavailable or warming up
+Unavailable=Performance data unavailable
