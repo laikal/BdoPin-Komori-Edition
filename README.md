@@ -16,7 +16,7 @@ BdoPin is written in **C using the Windows API** and is distributed as a small s
 
 BdoPin detects the CPU topology and shows the selected logical CPUs, active preset, process priority, and the result of the most recent application.
 
-![BdoPin Main Window](img/main.jpg)
+![BdoPin Main Window](img/img1.03c.jpg)
 
 ### Applied Processor Affinity
 
@@ -242,7 +242,7 @@ BdoPin은 **C 언어와 Windows API**를 기반으로 제작된 독립 실행형
 
 CPU 토폴로지, 선택된 논리 CPU, 현재 프리셋, 프로세스 우선순위와 최근 적용 결과를 확인할 수 있습니다.
 
-![BdoPin 메인 화면](img/main.jpg)
+![BdoPin 메인 화면](img/img1.03c.jpg)
 
 ### 적용된 프로세서 선호도
 
